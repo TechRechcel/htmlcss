@@ -1,0 +1,44 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+
+}
+
+.calc-div {
+    margin: 0 auto;
+    width: 60vw;
+    border: 1px solid black;
+    height: 400px;
+    display: flex;
+    flex-flow: column nowrap;
+    padding: 20px;
+}
+.calc-div h2, .calc-div #result {
+    text-align: center;
+}
+.calc-div input {
+    text-align: center;
+    background-color: darkslategray;
+    color: white;
+    font-size: 2rem;
+}
+.calc-div #result {
+    background-color: forestgreen;
+    color: white;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 5rem;
+}
+.calc-div .clear-key {
+    background-color: red;
+    color: white;
+}
+.calc-div .equal-key {
+    background-color: rgb(3, 82, 85);
+    color: white;
+}
+.calc-div button, calc-div input {
+    border: none;
+}
+
