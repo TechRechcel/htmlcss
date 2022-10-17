@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Javascript Exercise 4</title>
+
+    <div class="output"></div>
+</head>
+<body>
+
+    <script>
+ /*   let numbers = [1, 1, 2, 2, 2, 3, 3, 4, 5, 5, 5, 6, 6, 7, 7, 7, 8, 9, 9, 9];
+    let n = numbers.length;
+
+//machine problem 1
+    function countCon(ar, n) {
+        let cnt = 0;
+        for(let i = 0; i < n - 1; i++) {
+            if (ar[i] == ar[i + 1]) 
+                cnt++;
+            
+        }
+        return cnt;
+
+    }
+console.log(countCon(numbers, n)); */
+
+//machine problem 2 
+let output = document.querySelector(".output");
+
+let setOfNumber = [23,34,56,34,5,8,11,43]; 
+
+
+setOfNumber.forEach(function findTheMinNum() {
+let min = setOfNumber.reduce((a, b) => Math.min(a, b))
+console.log( min + " : is the lowest number")
+
+})
+
+    setOfNumber.sort();
+    console.log(setOfNumber.length - 1);
+    console.log(setOfNumber[0]);
+
+
+    </script>
+</body>
+</html>
