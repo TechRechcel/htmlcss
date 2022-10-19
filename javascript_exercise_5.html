@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JavaScript Exercise 5</title>
+    <style>
+        body {
+            height: 100vh;
+        }
+        .machine-problem-1 {
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: center;
+            align-content: center;
+            
+        }
+        h2, input, body {
+            text-align: center;
+        }
+        input, button {
+            width: 100px;
+            margin: 0 auto;
+        }
+        table, th, td {
+            border: 1px solid blue;
+        }
+        table {
+            height: 100vh;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <!--Machine Problem 1-->
+    <div class="machine-problem-1">
+        <h2>Machine Problem 1</h2>
+            <input type="text" id="input"><button onmouseout="NumGen()">Generate Number!</button><button id="clearBtn" onclick="cl()">Clear</button>
+    </div>
+
+    <!--Machine Problem 2-->
+    <div id="main" class="page-wrapper">
+            <table style="width: 100%;">
+                    <thead>
+                        <tr>
+                            <th>Description</th>
+                            <th>Qty</th>
+                            <th>Unit Price</th>
+                            <th>Amount</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="description">Description 1</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td class="description">Description 2</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td class="description">Description 3</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td class="description">Description 4</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                                <td class="description">Description 5</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                    <td class="description">Description 6</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                        <tr>
+                            <td colspan="3" style="text-align: right;">Sub Total</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td colspan="3" style="text-align: right;">VAT</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td colspan="3" style="text-align: right;">Total</td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+    </div>
+
+    <script>
+        //machine problem 1
+        var inputNum = document.getElementById("input");
+        function NumGen(n) {
+ 
+    for(let j = 1; j < n + 1; j++)
+    {
+ 
+        if (j % 7 == 0)
+            document.write(j + " ");
+    }
+    return n;
+}
+NumGen(inputNum.value);
+
+    function cl() {
+        window.location.reload();
+        inputNum.value = '';
+    }
+
+    //end of machine problem 1
+
+    //machine problem 2 
+    const description = document.getElementsByClassName("description");
+    const invoiceItems = [{description: "Mouse", Qty: 3, unitPrice: 200}, 
+                {description: "Keyboard", Qty: 3, unitPrice: 400},
+                {description: "Monitor", Qty: 6, unitPrice: 5400},
+                {description: "CPU Tower Case", Qty: 3, unitPrice: 1200},
+                {description: "Headset", Qty: 3, unitPrice: 500},
+                {description: "UPS", Qty: 1, unitPrice: 4000},];
+    let index = invoiceItems.length;
+    let i = 0;
+    for (i; i < index; i++) {
+        for (let z = 0, len = description.length; z < len; z++) {
+    // elements[i].style ...
+            console.log(description)
+}
+        description.textContent = invoiceItems[i].description;
+       
+    }
+
+
+    </script>
+</body>
+</html>
